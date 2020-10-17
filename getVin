@@ -1,0 +1,20 @@
+#!/bin/zsh
+
+KODIAQ="XW8JC6NS9MH402460"
+CEED="XWEHN812AF0005914"
+ACCENT="X7MCF41GP5M040859"
+
+case $1 in
+	kodiaq|KODIAQ|Kodiaq)
+		echo $KODIAQ
+		;;
+	ceed|CEED|Ceed)
+		echo $CEED
+		;;
+	accent|ACCENT|Accent)
+		echo $ACCENT
+		;;	
+	*)
+		echo "Тут нет такой машины"
+		;;
+esac
