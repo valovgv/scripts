@@ -16,6 +16,7 @@ case $1 in
 		;;
 	all)
 		echo "Accent: ${ACCENT}\n"					
+		;;
 	*)
 		echo "Тут нет такой машины"
 		;;
