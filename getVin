@@ -13,7 +13,9 @@ case $1 in
 		;;
 	accent|ACCENT|Accent)
 		echo $ACCENT
-		;;	
+		;;
+	all)
+		echo "Accent: ${ACCENT}\n"					
 	*)
 		echo "Тут нет такой машины"
 		;;
