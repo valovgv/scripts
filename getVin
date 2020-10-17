@@ -15,7 +15,9 @@ case $1 in
 		echo $ACCENT
 		;;
 	all)
-		echo "Accent: ${ACCENT}\n"					
+		echo "Accent: ${ACCENT}"
+		echo "Ceed:	${CEED}"
+		echo "Kodiaq: ${KODIAQ}"					
 		;;
 	*)
 		echo "Тут нет такой машины"
