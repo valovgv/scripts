@@ -2,6 +2,6 @@
 
 PATH=/usr/local/bin
 
-for file in *; do
-if ! [ -f $PATH/$FILENAME ]; then ln -s ./FILENAME $PATH/$FILENAME; fi
+for FILE in *; do
+if ! [ -f $PATH/$FILE ]; then ln -s $FILE $PATH/$FILE; fi
 done
