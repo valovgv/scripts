@@ -4,20 +4,20 @@ KODIAQ="XW8JC6NS9MH402460"
 CEED="XWEHN812AF0005914"
 ACCENT="X7MCF41GP5M040859"
 
+FGetVIN(){
+	echo $1 | pbcopy
+        echo VIN: $1 скопирован в буфер обмена
+}
+
 case $1 in
 	kodiaq|KODIAQ|Kodiaq)
-		echo $KODIAQ
+		FGetVIN $KODIAQ
 		;;
 	ceed|CEED|Ceed)
-		echo $CEED
+		FGetVIN $CEED
 		;;
 	accent|ACCENT|Accent)
-		echo $ACCENT
-		;;
-	all)
-		echo "Accent: ${ACCENT}"
-		echo "Ceed:	${CEED}"
-		echo "Kodiaq: ${KODIAQ}"					
+		FGetVIN $ACCENT
 		;;
 	*)
 		echo "Тут нет такой машины"
