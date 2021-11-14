@@ -10,3 +10,4 @@ ln -s $FILE $IPATH/$FILE
 fi
 fi
 done
+echo Done
