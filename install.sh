@@ -1,12 +1,12 @@
 #! /bin/bash
 
-PATH=/usr/local/bin
+#path to install
+IPATH=/usr/local/bin
 
 for FILE in *; do
-echo $PATH/$FILE
-if ! [ -f $PATH/$FILE ]; then 
+if ! [ -f $IPATH/$FILE ]; then 
 if [ $FILE != "install.sh" ]; then
-ln -s $FILE $PATH/$FILE 
+ln -s $FILE $IPATH/$FILE 
 fi
 fi
 done
