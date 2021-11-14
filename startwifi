@@ -1,0 +1,29 @@
+#!/bin/bash
+
+CONFIG=/etc/wpa_supplicant/wpa.conf
+
+if ps ax | grep -v grep | grep wpa_supplicant > /dev/null
+then
+	echo -e "
+\E[1;32mWiFi already started\E[0m
+		";
+else
+	if [ -e $CONFIG ]
+	then
+		echo -e "
+\E[1;33mWiFi starting...\E[0m
+			"
+		wpa_supplicant -Dwext -iwlan0 -c$CONFIG & > /dev/null
+		sleep 3
+		dhcpcd wlan0 >> /dev/null
+		echo -e "
+\E[1;32mWiFi starting success!\E[0m
+			";
+	else
+		echo -e "
+\E[1;31mConfig file not exist, use:
+    	\E[01;32mwpa_passphrase SSID LOGIN PASSWORD >> /etc/wpa_supplicant/wpa.conf\E[1;31m
+				and start this script again.\E[0m
+			";
+	fi
+fi
