@@ -2,6 +2,5 @@
 
 PATH=/usr/local/bin
 
-FILENAME=mupdate
-
-if ! [ -f $PATH/$FILENAME ]; then ln -s ./FILENAME $PATH/$FILENAME; fi
+for file in ./*; do echo $file;  done
+#if ! [ -f $PATH/$FILENAME ]; then ln -s ./FILENAME $PATH/$FILENAME; fi
