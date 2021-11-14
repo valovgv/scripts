@@ -2,4 +2,6 @@
 
 PATH=/usr/local/bin
 
-sudo ln -s ./mupdate $PATH
+FILENAME=mupdate
+
+if ! [ -f $PATH/$FILENAME ]; then ln -s ./FILENAME $PATH/$FILENAME; fi
