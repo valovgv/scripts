@@ -3,10 +3,11 @@
 #path to install
 IPATH=/usr/local/bin
 
-for FILE in *; do
-if ! [ -f $IPATH/$FILE ]; then 
-if [ $FILE != "install.sh" ]; then
-ln -s $(realpath $FILE) $IPATH/$FILE 
+for FILE in ./*; do
+BNAME=$(basename $FILE)
+if ! [ -f $IPATH/$BNAME ]; then 
+if [ $BNAME != "install.sh" ]; then
+ln -s $(realpath $FILE) $IPATH/$BNAME 
 fi
 fi
 done
